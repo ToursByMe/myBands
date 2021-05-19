@@ -17,6 +17,9 @@ import { ToastrModule } from 'ngx-toastr';
 
 // reactive forms if needed
 import { ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 // where are we
@@ -26,7 +29,10 @@ registerLocaleData(localeESP);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +55,11 @@ registerLocaleData(localeESP);
       useValue: 'es-ES'
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    HeaderComponent,
+     FooterComponent,
+     NavbarComponent]
 })
 export class AppModule { }
 

@@ -30,4 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   * [**@popperjs/core**](https://popper.js.org/docs/v2/) V2 ✔
 
   * Bootstrap version [**5.0**](https://getbootstrap.com/docs/5.0/getting-started/download/) ✔
+
+  * Skipping [**test**](https://tutorialsforangular.com/2019/12/31/skipping-tests-in-angular-cli/) in Angular ✔  
   
