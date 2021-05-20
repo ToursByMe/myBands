@@ -20,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './views/home/home.component';
 
 
 // where are we
@@ -32,7 +33,8 @@ registerLocaleData(localeESP);
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,6 @@ registerLocaleData(localeESP);
     ToastrModule.forRoot({
       preventDuplicates: true
     }),
-    // reactive forms
     ReactiveFormsModule, // !important, do not remove
 
 
@@ -59,7 +60,8 @@ registerLocaleData(localeESP);
   exports: [
     HeaderComponent,
      FooterComponent,
-     NavbarComponent]
+     NavbarComponent,
+     HomeComponent]
 })
 export class AppModule { }
 
