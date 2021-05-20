@@ -8,8 +8,9 @@ import { registerLocaleData } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 // comunicating with back-end
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 // popUps UI/UX answers
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,10 +18,13 @@ import { ToastrModule } from 'ngx-toastr';
 
 // reactive forms if needed
 import { ReactiveFormsModule } from '@angular/forms';
+
+// components
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './views/home/home.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 // where are we
@@ -39,7 +43,6 @@ registerLocaleData(localeESP);
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClient,
     HttpClientModule,
     // ngx-toastr
     BrowserAnimationsModule,
@@ -47,7 +50,7 @@ registerLocaleData(localeESP);
       preventDuplicates: true
     }),
     ReactiveFormsModule, // !important, do not remove
-
+    FontAwesomeModule
 
   ],
   providers: [
