@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light pb-5 pt-5">
   <div class="container">
     <a class="navbar-brand" href="#">BandCamp</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,9 +16,12 @@
           <a class="nav-link" routerLink="/home" tabindex="-1" >About</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <form class="d-flex d-none">
         <input class="form-control me-2" type="search" [placeholder]="placeholder.action" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+
+        <button class="btn btn-outline-success" type="submit">
+          <fa-icon [icon]="faSearch" class="{{ iconClass }}"></fa-icon>
+        </button>
       </form>
     </div>
   </div>
