@@ -17,30 +17,6 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "3",
-    "name": "Queen",
-    "members": ["Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"],
-    "album": "A Night At the Opera",
-    "yearAlbum": "1975",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "4",
-    "name": "Queen",
-    "members": ["Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"],
-    "album": "A Day at the Races",
-    "yearAlbum": "1976",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "5",
-    "name": "Queen",
-    "members": ["Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"],
-    "album": "News of the World",
-    "yearAlbum": "1977",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
     "id": "6",
     "name": "The Rolling Stones",
     "members": ["Brian Jones", "Mick Jagger", "Keith Richards", "Bill Wyman", "Charlie Watts", " Ian Steward"],
@@ -54,70 +30,6 @@
     "members": ["Mick Taylor", "Mick Jagger", "Keith Richards", "Bill Wyman", "Charlie Watts", " Ian Steward"],
     "album": "Let it Bleed",
     "yearAlbum": "1969",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "8",
-    "name": "The Rolling Stones",
-    "members": ["Mick Jagger", "Keith Richards", "Charlie Watts", "Bill Wyman", "Ian Steward", "Ronnie Woods"],
-    "album": "Black And Blue",
-    "yearAlbum": "1976",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "9",
-    "name": "The Rolling Stones",
-    "members": ["Mick Jagger", "Keith Richards","Bill Wyman", "Charlie Watts", "Ronnie Wood"],
-    "album": "Dirty Work",
-    "yearAlbum": "1986",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "10",
-    "name": "The Rolling Stones",
-    "members": ["Mick Jagger", "Keith Richards", "Charlie Watts", "Ronnie Wood"],
-    "album": "Bridges to Babylon",
-    "yearAlbum": "1997",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "11",
-    "name": "Led Zeppellin",
-    "members": ["Jimmy Page", "John Paul Jones", "Robert Plan", "John Bonham"],
-    "album": "Led Zeppellin",
-    "yearAlbum": "1969",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "12",
-    "name": "Led Zeppellin",
-    "members": ["Jimmy Page", "John Paul Jones", "Robert Plan", "John Bonham"],
-    "album": "Led Zeppellin II",
-    "yearAlbum": "1969",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "13",
-    "name": "Led Zeppellin",
-    "members": ["Jimmy Page", "John Paul Jones", "Robert Plan", "John Bonham"],
-    "album": "Led Zeppellin III",
-    "yearAlbum": "1970",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "14",
-    "name": "Led Zeppellin",
-    "members": ["Jimmy Page", "John Paul Jones", "Robert Plan", "John Bonham"],
-    "album": "Led Zeppellin IV",
-    "yearAlbum": "1971",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "15",
-    "name": "Led Zeppellin",
-    "members": ["Jimmy Page", "John Paul Jones", "Robert Plan", "John Bonham"],
-    "album": "Houses of the Holy",
-    "yearAlbum": "1973",
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
@@ -137,30 +49,6 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "18",
-    "name": "Pink Floyd",
-    "members": ["Roger Waters", "Nick Mason", "David Gilmour", "Richard Wright", "Bob Klose"],
-    "album": "The Dark Side of the Moon",
-    "yearAlbum": "1973",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "19",
-    "name": "Pink Floyd",
-    "members": ["Roger Waters", "Nick Mason", "David Gilmour", "Richard Wright", "Bob Klose"],
-    "album": "Animals",
-    "yearAlbum": "1977",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "20",
-    "name": "Pink Floyd",
-    "members": ["Roger Waters", "Nick Mason", "David Gilmour", "Richard Wright", "Bob Klose"],
-    "album": "The Wall",
-    "yearAlbum": "1979",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
     "id": "21",
     "name": "Deep Purple",
     "members": ["Chris Curtis", "Ritchie Blackmore", "Rod Evans", "Jon Lord", "Nick Simper", "Ian Paice"],
@@ -174,30 +62,6 @@
     "members": ["Ian Gillan", "Ritchie Blackmore", "Rod Evans", "Jon Lord", "Nick Simper", "Ian Paice"],
     "album": "Deep Purple",
     "yearAlbum": "1969",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "23",
-    "name": "Deep Purple",
-    "members": ["Ian Gillan", "Ritchie Blackmore", "Roger Glover", "Jon Lord", "Ian Paice"],
-    "album": "Deep Purple in Rock",
-    "yearAlbum": "1970",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "24",
-    "name": "Deep Purple",
-    "members": ["David Coverdale", "Ritchie Blackmore", "Glen Hughes", "Jon Lord", "Ian Paice"],
-    "album": "Burn",
-    "yearAlbum": "1973",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "25",
-    "name": "Deep Purple",
-    "members": ["Ian Gillan", "Ritchie Blackmore", "Roger Glover", "Jon Lord", "Ian Paice"],
-    "album": "The House of Blue Light",
-    "yearAlbum": "1987",
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
@@ -217,22 +81,6 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "28",
-    "name": "AC/DC",
-    "members": ["Malcon Young", "Angus Young", "Bon Scott", "Phil Rudd", "Cliff Williams"],
-    "album": "Back in Black",
-    "yearAlbum": "1980",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "30",
-    "name": "AC/DC",
-    "members": ["Malcon Young", "Angus Young", "Brian Johnson", "Phil Rudd", "Cliff Williams"],
-    "album": "Black Ice",
-    "yearAlbum": "2008",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
     "id": "31",
     "name": "Ramones",
     "members": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Tommy Ramone"],
@@ -249,30 +97,6 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "33",
-    "name": "Ramones",
-    "members": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Tommy Ramone"],
-    "album": "Rocket to Russia",
-    "yearAlbum": "1977",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "34",
-    "name": "Ramones",
-    "members": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Marky Ramone"],
-    "album": "Road to Ruin",
-    "yearAlbum": "1978",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "35",
-    "name": "Ramones",
-    "members": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Tommy Ramone"],
-    "album": "End of the Century",
-    "yearAlbum": "1980",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
     "id": "36",
     "name": "Kiss",
     "members": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
@@ -286,30 +110,6 @@
     "members": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
     "album": "Dressed to Kill",
     "yearAlbum": "1975",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "38",
-    "name": "Kiss",
-    "members": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
-    "album": "Rock and Roll Over",
-    "yearAlbum": "1976",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "39",
-    "name": "Kiss",
-    "members": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
-    "album": "Love Gun",
-    "yearAlbum": "1977",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
-    },
-    {
-    "id": "40",
-    "name": "Kiss",
-    "members": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
-    "album": "Dinasty",
-    "yearAlbum": "1979",
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     }
   ]
