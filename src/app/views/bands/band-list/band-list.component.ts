@@ -10,7 +10,7 @@ import { AllbandsService } from 'src/app/services/allbands.service';
   styleUrls: ['./band-list.component.scss']
 })
 export class BandListComponent implements OnInit {
-// observable
+// observable for json
 bands$?: Observable<Mybands[]> | undefined;
 // loading
 public loading: boolean;

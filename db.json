@@ -17,7 +17,7 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "6",
+    "id": "3",
     "name": "The Rolling Stones",
     "members": ["Brian Jones", "Mick Jagger", "Keith Richards", "Bill Wyman", "Charlie Watts", " Ian Steward"],
     "album": "The Rolling Stones",
@@ -25,7 +25,7 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "7",
+    "id": "4",
     "name": "The Rolling Stones",
     "members": ["Mick Taylor", "Mick Jagger", "Keith Richards", "Bill Wyman", "Charlie Watts", " Ian Steward"],
     "album": "Let it Bleed",
@@ -33,7 +33,7 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "16",
+    "id": "5",
     "name": "Pink Floyd",
     "members": ["Syd Barret", "Nick Mason", "Roger Waters", "Richard Wright", "Bob Klose"],
     "album": "The Piper at the Gates of Dawn",
@@ -41,7 +41,7 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "17",
+    "id": "6",
     "name": "Pink Floyd",
     "members": ["Roger Waters", "Nick Mason", "David Gilmour", "Richard Wright", "Bob Klose"],
     "album": "A Sauceful of Secrets",
@@ -49,7 +49,7 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "21",
+    "id": "7",
     "name": "Deep Purple",
     "members": ["Chris Curtis", "Ritchie Blackmore", "Rod Evans", "Jon Lord", "Nick Simper", "Ian Paice"],
     "album": "Shades of Deep Purple",
@@ -57,7 +57,7 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "22",
+    "id": "8",
     "name": "Deep Purple",
     "members": ["Ian Gillan", "Ritchie Blackmore", "Rod Evans", "Jon Lord", "Nick Simper", "Ian Paice"],
     "album": "Deep Purple",
@@ -65,7 +65,7 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "26",
+    "id": "9",
     "name": "AC/DC",
     "members": ["Malcon Young", "Angus Young", "Bon Scott", "George Young", "Rob Bailey", "Peter Clack", "Tony Currenti", "John Proud", "Harry Vanda", "Richard Ford"],
     "album": "High Voltage",
@@ -73,7 +73,7 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "27",
+    "id": "10",
     "name": "AC/DC",
     "members": ["Malcon Young", "Angus Young", "Bon Scott", "Phil Rudd", "Cliff Williams"],
     "album": "Highway to Hell",
@@ -81,7 +81,7 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "31",
+    "id": "11",
     "name": "Ramones",
     "members": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Tommy Ramone"],
     "album": "Ramones",
@@ -89,7 +89,7 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "32",
+    "id": "12",
     "name": "Ramones",
     "members": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Tommy Ramone"],
     "album": "Leave Home",
@@ -97,7 +97,7 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "36",
+    "id": "13",
     "name": "Kiss",
     "members": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
     "album": "Kiss",
@@ -105,7 +105,7 @@
     "photAlbum": "https://picsum.photos/150/100/?blur=1"
     },
     {
-    "id": "37",
+    "id": "14",
     "name": "Kiss",
     "members": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
     "album": "Dressed to Kill",
