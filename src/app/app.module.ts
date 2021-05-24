@@ -26,7 +26,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './views/home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BandListComponent } from './views/bands/band-list/band-list.component';
-
+import { BandDetailComponent } from './views/bands/band-detail/band-detail.component';
 
 // where are we
 registerLocaleData(localeESP);
@@ -40,7 +40,8 @@ registerLocaleData(localeESP);
     FooterComponent,
     NavbarComponent,
     HomeComponent,
-    BandListComponent
+    BandListComponent,
+    BandDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +68,8 @@ registerLocaleData(localeESP);
      FooterComponent,
      NavbarComponent,
      HomeComponent,
-     BandListComponent]
+     BandListComponent,
+     BandDetailComponent]
 })
 export class AppModule { }
 

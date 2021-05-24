@@ -13,13 +13,22 @@ export class AllbandsService {
 
   constructor(private http: HttpClient) { }
 // fake api json
+// get all list
   getAllBands() {
     return this.http.get<Mybands[]>(this.ROOT_URL);
   }
+  // get one
   getOneBand(id: string) {
     return this.http.get<Mybands[]>(`${this.ROOT_URL}/${id}`);
   }
-
+  // delete one
+  deleteBand(id: string){
+    return this.http.delete<Mybands[]>(`${this.ROOT_URL}/${id}`);
+  }
+// update one
+updateBand(id: string) {
+  console.log('I need a body request');
+}
   // from my db.json
   getBands() {
     console.log(fakeBands);
