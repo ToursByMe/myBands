@@ -29,9 +29,8 @@ pickUpBand() {
   this.bandSub$ = this.serviceAllBands.getBand(this.id)
   .subscribe(
     (data: any) => {
-      console.log(this.id);
       this.band = data;
-      console.log(this.band)
+      console.log(this.band);
     }, error => {
       console.log(error);
     }
