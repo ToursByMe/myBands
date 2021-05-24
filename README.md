@@ -33,13 +33,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
   * Skipping [**test**](https://tutorialsforangular.com/2019/12/31/skipping-tests-in-angular-cli/) in Angular ✔  
 
-  * [**Setting**](https://css-tricks.com/reset-all-margins-padding/) up the document ✔ 
+  * [**Setting**](https://css-tricks.com/reset-all-margins-padding/) up the document ✔
 
 ## Images
 
-  * Header. Photo by <a href="https://unsplash.com/@trommelkopf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Steve Harvey</a> on <a href="https://unsplash.com/s/photos/music?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  * [**Placeholder**](https://via.placeholder.com/) Photos
 
-  * Carousel Photo by <a href="https://unsplash.com/@trommelkopf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Steve Harvey</a> on <a href="https://unsplash.com/s/photos/music?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
-  
-  
+  * [**Picsum**](https://picsum.photos/) photos
