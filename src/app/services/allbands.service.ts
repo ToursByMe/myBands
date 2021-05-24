@@ -15,7 +15,8 @@ export class AllbandsService {
 // fake api json
 // get all list
   getAllBands() {
-    return this.http.get<Mybands[]>(this.ROOT_URL);
+   // return this.http.get<Mybands[]>(this.ROOT_URL);
+    return this.http.get(this.ROOT_URL);
   }
   // get one
   getOneBand(id: string) {

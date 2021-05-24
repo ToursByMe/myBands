@@ -15,7 +15,7 @@ bands$?: Observable<Mybands[]> | undefined;
 // loading
 public loading: boolean;
 // for fake api
-bands: any[] = [];
+bands: any[] | undefined;
 
   constructor(private bandService: AllbandsService,
               private router: Router) {
@@ -26,7 +26,14 @@ bands: any[] = [];
     // to get bands from json
     // this.bands$ = this.bandService.getBands();
     // from fake api
-   this.bands$ = this.bandService.getAllBands()
+    this.bandService.getAllBands().subscribe(
+      (data: any) => {
+        this.bands = data;
+        console.log(this.bands);
+      }, error => {
+        console.log(error);
+      }
+    )
 
 
   }
