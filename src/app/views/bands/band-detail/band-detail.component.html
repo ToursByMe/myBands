@@ -1,4 +1,39 @@
 <div class="container">
-  <p class="h1 text-center">{{ band?.name }}</p>
+  <div class="row pt-4">
+    <div class="col justify-content-between">
+      <div class="card border-0">
+        <div class="card-body ">
+          <h3 class="card title border-0 text-center">
+            {{ band?.name }}
+          </h3>
+          <div class="d-flex justify-content-between pt-2 pb-2">
+            <h5 class="card-subtitle">{{ band?.album }}</h5>
+          <h5 class="card-subtitle">Year of Release: {{ band?.yearAlbum }}</h5>
+          </div>
+
+          <p class="card-text" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illo officia
+            exercitationem quisquam tempore rerum, id quos quod unde repudiandae dolores vitae ea saepe laboriosam nulla
+            temporibus quasi, nostrum architecto!</p>
+            <div class="d-flex justify-content-around">
+              <button class="btn bg-warning fw-bold" (click)="deleteBand(band.id)">Delete Album</button>
+            <button class="btn bg-warning fw-bold">Update Album</button>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-body">
+        <div class="card-img">
+          <img [src]="band?.photoAlbum" alt="{{ band?.name }}" srcset="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+
+    </div>
+    <div class="col"></div>
+  </div>
 </div>
- 

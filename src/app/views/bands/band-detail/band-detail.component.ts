@@ -15,6 +15,10 @@ export class BandDetailComponent implements OnInit {
 band?: Mybands;
 id?: any;
 bandSub$?: Subscription;
+bands?: Mybands[] = [];
+
+// errors
+myError: boolean = false;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -24,16 +28,34 @@ bandSub$?: Subscription;
   ngOnInit(): void {
 this.pickUpBand();
   }
+
 pickUpBand() {
   this.id = (this.route.snapshot.paramMap.get('id'));
-  this.bandSub$ = this.serviceAllBands.getBand(this.id)
+  this.serviceAllBands.getOneBand(this.id)
   .subscribe(
     (data: any) => {
       this.band = data;
       console.log(this.band);
     }, error => {
       console.log(error);
+      this.myError = true;
+      return error;
     }
   )
+}
+// delete
+deleteBand(id: string) {
+  this.serviceAllBands.deleteBand(id)
+  .subscribe(
+    (data) => {
+      this.bands = this.bands?.filter(item =>  item.id !== id)
+      console.log(this.bands);
+      console.log("post deleted");
+     // console.log(item)
+    }, error => {
+      console.log(error);
+      this.myError = true;
+      return error;
+    })
 }
 }
