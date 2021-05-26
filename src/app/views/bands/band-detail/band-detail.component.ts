@@ -19,6 +19,7 @@ bands?: Mybands[] = [];
 
 // errors
 myError: boolean = false;
+errorMessage: string = "";
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -44,18 +45,16 @@ pickUpBand() {
   )
 }
 // delete
-deleteBand(id: string) {
+deleteOneBand(id: any) {
+  id = (this.route.snapshot.paramMap.get('id'));
   this.serviceAllBands.deleteBand(id)
   .subscribe(
-    (data) => {
+    (res) => {
       this.bands = this.bands?.filter(item =>  item.id !== id)
-      console.log(this.bands);
-      console.log("post deleted");
-     // console.log(item)
-    }, error => {
-      console.log(error);
+    }, err => {
+      console.log(err);
       this.myError = true;
-      return error;
+      return err;
     })
 }
 }
