@@ -39,28 +39,28 @@ export class AllbandsService {
   getAllBands() {
    return this.http.get<Mybands[]>(this.ROOT_URL, this.httpOptions)
    .pipe(
-     catchError(this.errorHandler)
-   );
+    catchError((err) => this.errorHandler(err))
+  );
   }
   // get one
   getOneBand(id: string) {
     return this.http.get<Mybands[]>(`${this.ROOT_URL}/${id}`, this.httpOptions)
     .pipe(
-      catchError(this.errorHandler)
+      catchError((err) => this.errorHandler(err))
     );
   }
   // delete one
   deleteBand(id: string){
     return this.http.delete<Mybands>(`${this.ROOT_URL}/${id}`, this.httpOptions)
     .pipe(
-      catchError(this.errorHandler)
+      catchError((err) => this.errorHandler(err))
     );
   }
   // new one
   createBand(band: Mybands): Observable<Mybands> {
     return this.http.post<Mybands>(`${this.CREATE_URL}/bands`, JSON.stringify(band), this.httpOptions)
     .pipe(
-      catchError(this.errorHandler)
+      catchError((err) => this.errorHandler(err))
     );
   }
 // update one
@@ -81,15 +81,16 @@ return this.http.put<Mybands>(`${this.ROOT_URL}/${id}`, JSON.stringify(band), th
     );
   }
 // errors
-errorHandler(error: string | any) {
-  if (error.error instanceof ErrorEvent) {
-    this.errorsMessage = "An unexpected error has happened. \n You'll be redirected to Home page";
+errorHandler(err: string | any) {
+  if(err instanceof HttpErrorResponse) {
+  if (err.error instanceof ErrorEvent ) {
+    this.errorsMessage = (`Error status: ${err.status} ${err.statusText} \n Error message: ${err.message}` );
     this.toastr.error(this.errorsMessage, "Unexpected error");
     // redirect home
     this.route.navigate(['/home']);
   } else {
-    console.log(`Error status: ${error.status} ${error.statusText} \n Error message: ${error.message}` );
-    switch(error.status) {
+    console.log(`Error status: ${err.status} ${err.statusText} \n Error message: ${err.message}` );
+    switch(err.status) {
       case 401: // unauthorized
             this.errorsMessage = "Unauthorized. Please, return to Home Page.";
             this.toastr.error(this.errorsMessage, "Unauthorized");
@@ -123,6 +124,7 @@ errorHandler(error: string | any) {
 
     }
   }
+}
   return throwError(new Error(this.errorsMessage));
 }
 }

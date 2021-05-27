@@ -42,10 +42,9 @@ pickUpBand() {
     (data: any) => {
       this.band = data;
       console.log(this.band);
-    }, error => {
-      console.log(error);
-      this.myError = true;
-      return error;
+    }, err => {
+      console.log(err);
+      this.serviceAllBands.errorHandler(err);
     }
   )
 }
@@ -57,13 +56,11 @@ deleteOneBand(id: any) {
     (_res) => {
       this.bands = this.bands?.filter(item =>  item.id !== id);
       // user
-      this.successMessage = `Borrado Funciona`;
-      this.toastr.info(this.successMessage, "Success");
+      this.successMessage = `The Band has been deleted from the database.`;
+      this.toastr.success(this.successMessage, "Success");
     }, err => {
       console.log(err);
-      this.myError = true;
-      this.serviceAllBands.errorHandler(err)
-      return err;
-    })
+      this.serviceAllBands.errorHandler(err);
+    });
 }
 }

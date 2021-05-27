@@ -5,11 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ImagesPipe implements PipeTransform {
 
-  transform(image: any): string | null{
+  transform(image: any): any {
     if(!image) {
       return 'assets/img/card.jpg'
-    } 
-   return null;
+    }
+    if(image){
+      return image;
+    }
   }
 
 }
