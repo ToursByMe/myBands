@@ -40,3 +40,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   * [**Placeholder**](https://via.placeholder.com/) Photos
 
   * [**Picsum**](https://picsum.photos/) photos
+
+## CORS
+
+  * [**Cors Headers**](https://levelup.gitconnected.com/fixing-cors-errors-with-angular-cli-proxy-e5e0ef143f85) Errors
+
+  * [**Cors Proxy**](https://www.techiediaries.com/fix-cors-with-angular-cli-proxy-configuration/#:~:text=Why%20Do%20CORS%20Issues%20Occur,server%20is%20not%20configured%20properly) Errors

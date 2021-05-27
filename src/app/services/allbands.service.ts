@@ -104,7 +104,7 @@ errorHandler(err: string | any) {
           break;
 
         case 404: // not found
-            this.errorsMessage = "The requested resource was NOT found.";
+            this.errorsMessage = "The requested band was NOT found in the database.";
             this.toastr.error(this.errorsMessage, "Not Found");
             this.route.navigate(['/bands']);
           break;

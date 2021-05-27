@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row pt-4">
-    <div class="col justify-content-between">
+    <div class="col-md-6 justify-content-around">
       <div class="card border-0">
         <div class="card-body ">
           <h3 class="card title border-0 text-center">
@@ -11,9 +11,14 @@
           <h5 class="card-subtitle">Year of Release: {{ band?.yearAlbum }}</h5>
           </div>
 
-          <p class="card-text" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illo officia
+          <p class="card-text" *ngIf="band?.info; else textLorum">{{ band?.info }}</p>
+          <ng-template #textLorum>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illo officia
             exercitationem quisquam tempore rerum, id quos quod unde repudiandae dolores vitae ea saepe laboriosam nulla
-            temporibus quasi, nostrum architecto!</p>
+            temporibus quasi, nostrum architecto!
+            </p>
+          </ng-template>
             <div class="d-flex justify-content-around">
               <button class="btn bg-warning fw-bold" (click)="deleteOneBand(band?.id)">Delete Album</button>
             <button class="btn bg-warning fw-bold">Update Album</button>
@@ -22,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md-6 mx-auto">
       <div class="card-body">
         <div class="card-img">
           <img [src]="band?.photoAlbum | images" alt="{{ band?.name }}" srcset="">
@@ -32,8 +37,64 @@
   </div>
   <div class="row">
     <div class="col">
+<div class="card border-0 mb-5 mt-5 mx-auto">
+  <div class="card-body text-center">
+    <h2 class="card-title text-uppercase">update the album info</h2>
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="col-md-4">
+        <label for="bandName" class="form-label">Band's name</label>
+        <input type="text" class="form-control" id="bandName"  required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="albumName" class="form-label">Album's name</label>
+        <input type="text" class="form-control" id="albumName"  required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="yearAlbum" class="form-label">Year of release</label>
+        <div class="input-group has-validation">
+          <input type="text" class="form-control" id="yearAlbum" aria-describedby="inputGroupPrepend" required>
+          <div class="invalid-feedback">
+            Please type a year.
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mx-auto">
+          <div class="input-group">
+            <span class="input-group-text">Info Band</span>
+            <textarea class="form-control" aria-label="Info Band"></textarea>
+          </div>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+      </div>
+      <div class="col-md-6">
+        <label for="yearAlbum" class="form-label">Band's Members</label>
+        <div class="input-group has-validation">
+          <input type="text" class="form-control" id="yearAlbum" required>
+          <div class="invalid-feedback">
+            Please type only names and surnames.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="photoUpload" class="form-label">url picture</label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="photoUpload">
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form>
 
+  </div>
+</div>
     </div>
-    <div class="col"></div>
   </div>
 </div>
