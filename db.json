@@ -6,7 +6,7 @@
     "members": ["Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"],
     "album": "Queen",
     "yearAlbum": "1973",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "2",
@@ -14,7 +14,7 @@
     "members": ["Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"],
     "album": "Queen II",
     "yearAlbum": "1974",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "3",
@@ -22,7 +22,7 @@
     "members": ["Brian Jones", "Mick Jagger", "Keith Richards", "Bill Wyman", "Charlie Watts", " Ian Steward"],
     "album": "The Rolling Stones",
     "yearAlbum": "1964",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "4",
@@ -30,7 +30,7 @@
     "members": ["Mick Taylor", "Mick Jagger", "Keith Richards", "Bill Wyman", "Charlie Watts", " Ian Steward"],
     "album": "Let it Bleed",
     "yearAlbum": "1969",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "5",
@@ -38,7 +38,7 @@
     "members": ["Syd Barret", "Nick Mason", "Roger Waters", "Richard Wright", "Bob Klose"],
     "album": "The Piper at the Gates of Dawn",
     "yearAlbum": "1967",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "6",
@@ -46,7 +46,7 @@
     "members": ["Roger Waters", "Nick Mason", "David Gilmour", "Richard Wright", "Bob Klose"],
     "album": "A Sauceful of Secrets",
     "yearAlbum": "1968",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "7",
@@ -54,7 +54,7 @@
     "members": ["Chris Curtis", "Ritchie Blackmore", "Rod Evans", "Jon Lord", "Nick Simper", "Ian Paice"],
     "album": "Shades of Deep Purple",
     "yearAlbum": "1968",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "8",
@@ -62,7 +62,7 @@
     "members": ["Ian Gillan", "Ritchie Blackmore", "Rod Evans", "Jon Lord", "Nick Simper", "Ian Paice"],
     "album": "Deep Purple",
     "yearAlbum": "1969",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "9",
@@ -70,7 +70,7 @@
     "members": ["Malcon Young", "Angus Young", "Bon Scott", "George Young", "Rob Bailey", "Peter Clack", "Tony Currenti", "John Proud", "Harry Vanda", "Richard Ford"],
     "album": "High Voltage",
     "yearAlbum": "1975",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "10",
@@ -78,7 +78,7 @@
     "members": ["Malcon Young", "Angus Young", "Bon Scott", "Phil Rudd", "Cliff Williams"],
     "album": "Highway to Hell",
     "yearAlbum": "1979",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "11",
@@ -86,7 +86,7 @@
     "members": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Tommy Ramone"],
     "album": "Ramones",
     "yearAlbum": "1976",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "12",
@@ -94,7 +94,7 @@
     "members": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Tommy Ramone"],
     "album": "Leave Home",
     "yearAlbum": "1977",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "13",
@@ -102,7 +102,7 @@
     "members": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
     "album": "Kiss",
     "yearAlbum": "1974",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     },
     {
     "id": "14",
@@ -110,7 +110,7 @@
     "members": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
     "album": "Dressed to Kill",
     "yearAlbum": "1975",
-    "photAlbum": "https://picsum.photos/150/100/?blur=1"
+    "photAlbum": "https://picsum.photos/id/123/4928/3264"
     }
   ]
 }
