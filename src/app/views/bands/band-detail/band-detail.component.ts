@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
 import { Mybands } from 'src/app/models/DTOs/mybands';
 import { AllbandsService } from 'src/app/services/allbands.service';
@@ -21,9 +22,13 @@ bands?: Mybands[] = [];
 myError: boolean = false;
 errorMessage: string = "";
 
+// success
+successMessage: string = "";
+
   constructor(private route: ActivatedRoute,
               private router: Router,
               private formBuilder: FormBuilder,
+              private toastr: ToastrService,
               private serviceAllBands: AllbandsService ) { }
 
   ngOnInit(): void {
@@ -46,14 +51,18 @@ pickUpBand() {
 }
 // delete
 deleteOneBand(id: any) {
-  id = (this.route.snapshot.paramMap.get('id'));
+  // id = (this.route.snapshot.paramMap.get('id'));
   this.serviceAllBands.deleteBand(id)
   .subscribe(
-    (res) => {
-      this.bands = this.bands?.filter(item =>  item.id !== id)
+    (_res) => {
+      this.bands = this.bands?.filter(item =>  item.id !== id);
+      // user
+      this.successMessage = `Borrado Funciona`;
+      this.toastr.info(this.successMessage, "Success");
     }, err => {
       console.log(err);
       this.myError = true;
+      this.serviceAllBands.errorHandler(err)
       return err;
     })
 }

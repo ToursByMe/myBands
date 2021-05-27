@@ -1,9 +1,12 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+// Users experience
 import { ToastrService } from 'ngx-toastr';
+// rxjs
 import { Observable, of, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+// models
 import { fakeBands, Mybands } from '../models/DTOs/mybands';
 
 
@@ -13,6 +16,7 @@ import { fakeBands, Mybands } from '../models/DTOs/mybands';
 export class AllbandsService {
   // fake api online
   private ROOT_URL: string = "https://my-json-server.typicode.com/ToursByMe/myBands/bands";
+  private CREATE_URL: string = "https://my-json-server.typicode.com/ToursByMe/myBands"
 
   // errors
   private errorsMessage: string = "";
@@ -22,7 +26,9 @@ export class AllbandsService {
     headers: new HttpHeaders ({
       'Content-Type': "application/json",
       Accept: "application/json",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      "Access-Control-Allow-Origin": "http://localhost:4500",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      // "Access-Control-Allow-Origin": "*"
     })
   }
   constructor(private http: HttpClient,
@@ -45,23 +51,24 @@ export class AllbandsService {
   }
   // delete one
   deleteBand(id: string){
-    return this.http.delete<Mybands[]>(`${this.ROOT_URL}/${id}`, this.httpOptions)
+    return this.http.delete<Mybands>(`${this.ROOT_URL}/${id}`, this.httpOptions)
+    .pipe(
+      catchError(this.errorHandler)
+    );
+  }
+  // new one
+  createBand(band: Mybands): Observable<Mybands> {
+    return this.http.post<Mybands>(`${this.CREATE_URL}/bands`, JSON.stringify(band), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     );
   }
 // update one
-updateBand(id: string, name: string, album: string, yearAlbum: string, photoAlbum: string, members: string[]): Observable<Mybands[]> {
-return this.http.put<Mybands[]>(`${this.ROOT_URL}/${id}`, JSON.stringify({
-  id,
-  name,
-  members,
-  album,
-  yearAlbum,
-  photoAlbum}), this.httpOptions)
-  .pipe(
-    catchError(this.errorHandler)
-  );
+updateBand(id: string, band?: Mybands): Observable<Mybands> {
+return this.http.put<Mybands>(`${this.ROOT_URL}/${id}`, JSON.stringify(band), this.httpOptions)
+.pipe(
+  catchError(this.errorHandler)
+);
 }
   // from my db.json
   getBands() {
