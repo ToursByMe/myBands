@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
@@ -13,7 +13,7 @@ import { AllbandsService } from 'src/app/services/allbands.service';
 })
 export class BandDetailComponent implements OnInit {
 
-band?: Mybands;
+band!: Mybands;
 id?: any;
 bandSub$?: Subscription;
 bands?: Mybands[] = [];
@@ -25,11 +25,30 @@ errorMessage: string = "";
 // success
 successMessage: string = "";
 
+// placeholders
+placeholder = {
+  name: "Band's name",
+  album: "Album's name",
+  year: "Year of release",
+  info: "Lorem ipsum...",
+  members: "John Wick, John Rambo, John Wayne, John Ford",
+  url: "https://yourPhotoUrl.com"
+}
+
+// form
+  updateForm: FormGroup | any;
+  // checks
+regexYear: RegExp = /^[0-9]*$/;
+regexUrl:  RegExp = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
+
   constructor(private route: ActivatedRoute,
               private router: Router,
               private formBuilder: FormBuilder,
               private toastr: ToastrService,
-              private serviceAllBands: AllbandsService ) { }
+              private serviceAllBands: AllbandsService ) {
+
+   this.createForm()
+               }
 
   ngOnInit(): void {
 this.pickUpBand();
@@ -62,5 +81,27 @@ deleteOneBand(id: any) {
       console.log(err);
       this.serviceAllBands.errorHandler(err);
     });
+}
+// create form
+createForm() {
+  this.updateForm = this.formBuilder.group({
+    inputName    : [``, [Validators.required, Validators.minLength(3)]],
+    inputAlbum   : [``, [Validators.required, Validators.minLength(1)]],
+    inputYear    : [``, [Validators.required, Validators.maxLength(4), Validators.pattern(this.regexYear)]],
+    inputInfo    : [``, [Validators.required, Validators.minLength(40)]],
+    inputMembers : [``, [Validators.required]],
+    inputUrl     : [``, [Validators.required, Validators.pattern(this.regexUrl)]],
+  })
+}
+// onsubmit
+onSubmit(id: any){
+  console.log('onSubmit works');
+  console.log(this.updateForm.value);
+  this.serviceAllBands.updateBand(id, this.updateForm.value).subscribe(
+    _res => {
+      this.successMessage = "Well done, you just updated the info of the band";
+      this.toastr.success(this.successMessage, "Updated band");
+    }
+  )
 }
 }

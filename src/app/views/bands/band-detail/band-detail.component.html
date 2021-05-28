@@ -40,17 +40,31 @@
 <div class="card border-0 mb-5 mt-5 mx-auto">
   <div class="card-body text-center">
     <h2 class="card-title text-uppercase">update the album info</h2>
-    <form class="row g-3 needs-validation" novalidate>
+    <form class="row g-3 needs-validation"
+          [formGroup]="updateForm"
+          (ngSubmit)="onSubmit(band?.id)"
+          novalidate>
       <div class="col-md-4">
         <label for="bandName" class="form-label">Band's name</label>
-        <input type="text" class="form-control" id="bandName"  required>
+        <input type="text"
+               class="form-control"
+               id="bandName"
+               formControlName="inputName"
+               [placeholder]="placeholder.name"
+               [(ngModel)]="band.name"
+               required>
         <div class="valid-feedback">
           Looks good!
         </div>
       </div>
       <div class="col-md-4">
         <label for="albumName" class="form-label">Album's name</label>
-        <input type="text" class="form-control" id="albumName"  required>
+        <input type="text"
+               class="form-control"
+               id="albumName"
+               formControlName="inputAlbum"
+               [placeholder]="placeholder.album"
+               required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -58,7 +72,13 @@
       <div class="col-md-4">
         <label for="yearAlbum" class="form-label">Year of release</label>
         <div class="input-group has-validation">
-          <input type="text" class="form-control" id="yearAlbum" aria-describedby="inputGroupPrepend" required>
+          <input type="text"
+                  class="form-control"
+                  id="yearAlbum"
+                  aria-describedby="inputGroupPrepend"
+                  formControlName="inputYear"
+                  [placeholder]="placeholder.year"
+                  required>
           <div class="invalid-feedback">
             Please type a year.
           </div>
@@ -67,16 +87,25 @@
       <div class="col-12 mx-auto">
           <div class="input-group">
             <span class="input-group-text">Info Band</span>
-            <textarea class="form-control" aria-label="Info Band"></textarea>
+            <textarea class="form-control"
+                      aria-label="Info Band"
+                      formControlName="inputInfo"
+                      [placeholder]="placeholder.info">
+            </textarea>
           </div>
           <div class="invalid-feedback">
-            You must agree before submitting.
+            Text must be longer than 40 characters.
           </div>
       </div>
       <div class="col-md-6">
         <label for="yearAlbum" class="form-label">Band's Members</label>
         <div class="input-group has-validation">
-          <input type="text" class="form-control" id="yearAlbum" required>
+          <input type="text"
+                 class="form-control"
+                 id="yearAlbum"
+                 formControlName="inputMembers"
+                 [placeholder]="placeholder.members"
+                 required>
           <div class="invalid-feedback">
             Please type only names and surnames.
           </div>
@@ -85,7 +114,11 @@
       <div class="col-md-6">
         <label for="photoUpload" class="form-label">url picture</label>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" id="photoUpload">
+          <input type="text"
+                 class="form-control"
+                 id="photoUpload"
+                 formControlName="inputUrl"
+                 [placeholder]="placeholder.url">
         </div>
       </div>
       <div class="col-12">

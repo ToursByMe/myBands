@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
 // reactive forms if needed
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // components
 import { HeaderComponent } from './components/header/header.component';
@@ -54,6 +54,7 @@ registerLocaleData(localeESP);
     ToastrModule.forRoot({
       preventDuplicates: true
     }),
+    FormsModule,
     ReactiveFormsModule, // !important, do not remove
     FontAwesomeModule
 
