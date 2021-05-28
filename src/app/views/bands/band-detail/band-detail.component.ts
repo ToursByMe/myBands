@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { Mybands } from 'src/app/models/DTOs/mybands';
 import { AllbandsService } from 'src/app/services/allbands.service';
 
@@ -52,6 +52,7 @@ regexUrl:  RegExp = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!
 
   ngOnInit(): void {
 this.pickUpBand();
+// this.showMembers();
   }
 
 pickUpBand() {
@@ -95,13 +96,20 @@ createForm() {
 }
 // onsubmit
 onSubmit(id: any){
-  console.log('onSubmit works');
   console.log(this.updateForm.value);
   this.serviceAllBands.updateBand(id, this.updateForm.value).subscribe(
-    _res => {
+    (res) => {
+      console.log(res);
       this.successMessage = "Well done, you just updated the info of the band";
       this.toastr.success(this.successMessage, "Updated band");
-    }
-  )
+    }, err => {
+      console.log(err);
+      this.serviceAllBands.errorHandler(err);
+    });
 }
+// arrMembers
+// Why I can't see the members from the api and yet yes from my json?
+// Moreover, it works perfectly with the json, it does update it!
+// I need to do a mongoDB
+
 }

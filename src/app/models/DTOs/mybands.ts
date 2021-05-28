@@ -30,7 +30,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"],
     "album": "Queen",
     "yearAlbum": "1973",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": "Banda inglesa"
   },
   {
@@ -39,7 +39,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"],
     "album": "Queen II",
     "yearAlbum": "1974",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -48,7 +48,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"],
     "album": "A Night At the Opera",
     "yearAlbum": "1975",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -57,7 +57,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"],
     "album": "A Day at the Races",
     "yearAlbum": "1976",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -66,7 +66,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"],
     "album": "News of the World",
     "yearAlbum": "1977",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -75,7 +75,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Brian Jones", "Mick Jagger", "Keith Richards", "Bill Wyman", "Charlie Watts", " Ian Steward"],
     "album": "The Rolling Stones",
     "yearAlbum": "1964",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -84,7 +84,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Mick Taylor", "Mick Jagger", "Keith Richards", "Bill Wyman", "Charlie Watts", " Ian Steward"],
     "album": "Let it Bleed",
     "yearAlbum": "1969",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -93,7 +93,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Mick Jagger", "Keith Richards", "Charlie Watts", "Bill Wyman", "Ian Steward", "Ronnie Woods"],
     "album": "Black And Blue",
     "yearAlbum": "1976",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -102,7 +102,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Mick Jagger", "Keith Richards", "Bill Wyman", "Charlie Watts", "Ronnie Wood"],
     "album": "Dirty Work",
     "yearAlbum": "1986",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -111,7 +111,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Mick Jagger", "Keith Richards", "Charlie Watts", "Ronnie Wood"],
     "album": "Bridges to Babylon",
     "yearAlbum": "1997",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -120,7 +120,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Jimmy Page", "John Paul Jones", "Robert Plan", "John Bonham"],
     "album": "Led Zeppellin",
     "yearAlbum": "1969",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -129,7 +129,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Jimmy Page", "John Paul Jones", "Robert Plan", "John Bonham"],
     "album": "Led Zeppellin II",
     "yearAlbum": "1969",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -138,7 +138,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Jimmy Page", "John Paul Jones", "Robert Plan", "John Bonham"],
     "album": "Led Zeppellin III",
     "yearAlbum": "1970",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -147,7 +147,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Jimmy Page", "John Paul Jones", "Robert Plan", "John Bonham"],
     "album": "Led Zeppellin IV",
     "yearAlbum": "1971",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -156,7 +156,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Jimmy Page", "John Paul Jones", "Robert Plan", "John Bonham"],
     "album": "Houses of the Holy",
     "yearAlbum": "1973",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -165,7 +165,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Syd Barret", "Nick Mason", "Roger Waters", "Richard Wright", "Bob Klose"],
     "album": "The Piper at the Gates of Dawn",
     "yearAlbum": "1967",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -174,7 +174,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Roger Waters", "Nick Mason", "David Gilmour", "Richard Wright", "Bob Klose"],
     "album": "A Sauceful of Secrets",
     "yearAlbum": "1968",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -183,7 +183,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Roger Waters", "Nick Mason", "David Gilmour", "Richard Wright", "Bob Klose"],
     "album": "The Dark Side of the Moon",
     "yearAlbum": "1973",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -192,7 +192,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Roger Waters", "Nick Mason", "David Gilmour", "Richard Wright", "Bob Klose"],
     "album": "Animals",
     "yearAlbum": "1977",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -201,7 +201,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Roger Waters", "Nick Mason", "David Gilmour", "Richard Wright", "Bob Klose"],
     "album": "The Wall",
     "yearAlbum": "1979",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -210,7 +210,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Chris Curtis", "Ritchie Blackmore", "Rod Evans", "Jon Lord", "Nick Simper", "Ian Paice"],
     "album": "Shades of Deep Purple",
     "yearAlbum": "1968",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -219,7 +219,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Ian Gillan", "Ritchie Blackmore", "Rod Evans", "Jon Lord", "Nick Simper", "Ian Paice"],
     "album": "Deep Purple",
     "yearAlbum": "1969",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -228,7 +228,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Ian Gillan", "Ritchie Blackmore", "Roger Glover", "Jon Lord", "Ian Paice"],
     "album": "Deep Purple in Rock",
     "yearAlbum": "1970",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -237,7 +237,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["David Coverdale", "Ritchie Blackmore", "Glen Hughes", "Jon Lord", "Ian Paice"],
     "album": "Burn",
     "yearAlbum": "1973",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -246,7 +246,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Ian Gillan", "Ritchie Blackmore", "Roger Glover", "Jon Lord", "Ian Paice"],
     "album": "The House of Blue Light",
     "yearAlbum": "1987",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -255,7 +255,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Malcon Young", "Angus Young", "Bon Scott", "George Young", "Rob Bailey", "Peter Clack", "Tony Currenti", "John Proud", "Harry Vanda", "Richard Ford"],
     "album": "High Voltage",
     "yearAlbum": "1975",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -264,7 +264,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Malcon Young", "Angus Young", "Bon Scott", "Phil Rudd", "Cliff Williams"],
     "album": "Highway to Hell",
     "yearAlbum": "1979",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -273,7 +273,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Malcon Young", "Angus Young", "Bon Scott", "Phil Rudd", "Cliff Williams"],
     "album": "Back in Black",
     "yearAlbum": "1980",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -282,7 +282,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Malcon Young", "Angus Young", "Brian Johnson", "Phil Rudd", "Cliff Williams"],
     "album": "Black Ice",
     "yearAlbum": "2008",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -291,7 +291,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Tommy Ramone"],
     "album": "Ramones",
     "yearAlbum": "1976",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -300,7 +300,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Tommy Ramone"],
     "album": "Leave Home",
     "yearAlbum": "1977",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -309,7 +309,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Tommy Ramone"],
     "album": "Rocket to Russia",
     "yearAlbum": "1977",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -318,7 +318,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Marky Ramone"],
     "album": "Road to Ruin",
     "yearAlbum": "1978",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -327,7 +327,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Joey Ramone", "Johny Ramone", "Dee Dee Ramone", "Tommy Ramone"],
     "album": "End of the Century",
     "yearAlbum": "1980",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -336,7 +336,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
     "album": "Kiss",
     "yearAlbum": "1974",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -345,7 +345,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
     "album": "Dressed to Kill",
     "yearAlbum": "1975",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -354,7 +354,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
     "album": "Rock and Roll Over",
     "yearAlbum": "1976",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -363,7 +363,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
     "album": "Love Gun",
     "yearAlbum": "1977",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   },
   {
@@ -372,7 +372,7 @@ export const fakeBands: Mybands[] = [
     "arrMembers": ["Paul Stanley", "Gene Simmons", "Ace Frehley", "Peter Criss"],
     "album": "Dinasty",
     "yearAlbum": "1979",
-    "photoAlbum": "https://picsum.photos/250/200/?blur=1",
+    "photoAlbum": "https://picsum.photos/500/400/?blur=1",
     "info": ""
   }
 ]

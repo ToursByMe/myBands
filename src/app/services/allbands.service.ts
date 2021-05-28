@@ -65,6 +65,7 @@ export class AllbandsService {
   }
 // update one
 updateBand(id: string, band?: Mybands): Observable<Mybands> {
+  console.log(band);
 return this.http.put<Mybands>(`${this.ROOT_URL}/${id}`, JSON.stringify(band), this.httpOptions)
 .pipe(
   catchError(this.errorHandler)

@@ -35,7 +35,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row d-none" id="myForm">
     <div class="col">
 <div class="card border-0 mb-5 mt-5 mx-auto">
   <div class="card-body text-center">
@@ -63,6 +63,7 @@
                class="form-control"
                id="albumName"
                formControlName="inputAlbum"
+               [(ngModel)]="band.album"
                [placeholder]="placeholder.album"
                required>
         <div class="valid-feedback">
@@ -77,6 +78,7 @@
                   id="yearAlbum"
                   aria-describedby="inputGroupPrepend"
                   formControlName="inputYear"
+                  [(ngModel)]="band.yearAlbum"
                   [placeholder]="placeholder.year"
                   required>
           <div class="invalid-feedback">
@@ -90,6 +92,7 @@
             <textarea class="form-control"
                       aria-label="Info Band"
                       formControlName="inputInfo"
+                      [(ngModel)]="band.info"
                       [placeholder]="placeholder.info">
             </textarea>
           </div>
@@ -104,6 +107,7 @@
                  class="form-control"
                  id="yearAlbum"
                  formControlName="inputMembers"
+                 [(ngModel)]="band.arrMembers"
                  [placeholder]="placeholder.members"
                  required>
           <div class="invalid-feedback">
@@ -118,6 +122,7 @@
                  class="form-control"
                  id="photoUpload"
                  formControlName="inputUrl"
+                 [(ngModel)]="band.photoAlbum"
                  [placeholder]="placeholder.url">
         </div>
       </div>
