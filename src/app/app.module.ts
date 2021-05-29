@@ -28,6 +28,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BandListComponent } from './views/bands/band-list/band-list.component';
 import { BandDetailComponent } from './views/bands/band-detail/band-detail.component';
 import { ImagesPipe } from './pipes/images.pipe';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 // where are we
 registerLocaleData(localeESP);
@@ -55,9 +56,10 @@ registerLocaleData(localeESP);
     ToastrModule.forRoot({
       preventDuplicates: true
     }),
-    FormsModule,
+    FormsModule,// !important, do not remove
     ReactiveFormsModule, // !important, do not remove
-    FontAwesomeModule
+    FontAwesomeModule,
+    YouTubePlayerModule
 
   ],
   providers: [
@@ -78,4 +80,3 @@ registerLocaleData(localeESP);
     ]
 })
 export class AppModule { }
-

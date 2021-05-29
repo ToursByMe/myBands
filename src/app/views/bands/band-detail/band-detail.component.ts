@@ -122,8 +122,6 @@ showDiv(): void {
 }
 closeDiv(): void {
   document.querySelector('#info').classList.add('d-none') as unknown | null;
-
 }
-
 
 }
