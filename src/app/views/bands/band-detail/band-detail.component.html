@@ -20,8 +20,11 @@
             </p>
           </ng-template>
             <div class="d-flex justify-content-around">
-              <button class="btn bg-warning fw-bold" (click)="deleteOneBand(band?.id)">Delete Album</button>
-            <button class="btn bg-warning fw-bold">Update Album</button>
+              <button class="btn bg-warning fw-bold"
+                      id="myDelete"
+                     (click)="deleteOneBand(band?.id)">Delete Album</button>
+            <button class="btn bg-warning fw-bold"
+                    (click)="showDiv()">Update Album</button>
             </div>
 
         </div>

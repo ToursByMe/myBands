@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Observable, Subscription } from 'rxjs';
 import { Mybands } from 'src/app/models/DTOs/mybands';
@@ -37,6 +37,7 @@ placeholder = {
 
 // form
   updateForm: FormGroup | any;
+
   // checks
 regexYear: RegExp = /^[0-9]*$/;
 regexUrl:  RegExp = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
@@ -111,5 +112,10 @@ onSubmit(id: any){
 // Why I can't see the members from the api and yet yes from my json?
 // Moreover, it works perfectly with the json, it does update it!
 // I need to do a mongoDB
-
+//
+showDiv() {
+  document.querySelector('#myForm').classList.remove('d-none') as unknown;
+ // document.querySelector('#myDelete').classList.add('d-none') as unknown;
+ // to discuss with UI/UX team
+}
 }

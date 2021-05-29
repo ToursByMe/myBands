@@ -44,6 +44,7 @@ registerLocaleData(localeESP);
     BandListComponent,
     BandDetailComponent,
     ImagesPipe
+
   ],
   imports: [
     BrowserModule,
@@ -72,7 +73,9 @@ registerLocaleData(localeESP);
      NavbarComponent,
      HomeComponent,
      BandListComponent,
-     BandDetailComponent]
+     BandDetailComponent
+
+    ]
 })
 export class AppModule { }
 
