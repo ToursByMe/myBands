@@ -2,7 +2,7 @@
 export class Mybands {
   public id: string;
   public name: string;
-  public arrMembers: string[] = [];
+  public arrMembers: string[];
   public album: string;
   public yearAlbum: string;
   public photoAlbum: string;

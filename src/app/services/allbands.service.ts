@@ -58,6 +58,7 @@ export class AllbandsService {
   }
   // new one
   createBand(band: Mybands): Observable<Mybands> {
+    console.log(band)
     return this.http.post<Mybands>(`${this.CREATE_URL}/bands`, JSON.stringify(band), this.httpOptions)
     .pipe(
       catchError((err) => this.errorHandler(err))
@@ -71,6 +72,7 @@ return this.http.put<Mybands>(`${this.ROOT_URL}/${id}`, JSON.stringify(band), th
   catchError(this.errorHandler)
 );
 }
+
   // from my db.json
   getBands() {
     console.log(fakeBands);

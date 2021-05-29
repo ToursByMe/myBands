@@ -83,6 +83,7 @@ deleteOneBand(id: any) {
       console.log(err);
       this.serviceAllBands.errorHandler(err);
     });
+    this.closeDiv();
 }
 // create form
 createForm() {
@@ -107,15 +108,22 @@ onSubmit(id: any){
       console.log(err);
       this.serviceAllBands.errorHandler(err);
     });
+
 }
 // arrMembers
 // Why I can't see the members from the api and yet yes from my json?
 // Moreover, it works perfectly with the json, it does update it!
 // I need to do a mongoDB
 //
-showDiv() {
-  document.querySelector('#myForm').classList.remove('d-none') as unknown;
+showDiv(): void {
+  document.querySelector('#myForm').classList.remove('d-none') as unknown | null;
  // document.querySelector('#myDelete').classList.add('d-none') as unknown;
  // to discuss with UI/UX team
 }
+closeDiv(): void {
+  document.querySelector('#info').classList.add('d-none') as unknown | null;
+
+}
+
+
 }
