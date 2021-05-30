@@ -25,8 +25,9 @@
               <button class="btn bg-warning fw-bold"
                       id="myDelete"
                      (click)="deleteOneBand(band?.id)">Delete Album</button>
-            <button class="btn bg-warning fw-bold myInfo"
-                    (click)="showDiv()">Update Album</button>
+            <button class="btn bg-warning fw-bold myInfo text-capitalize"
+                    id="updateButton"
+                    (click)="showDiv()"></button>
             </div>
 
         </div>
@@ -34,8 +35,19 @@
     </div>
     <div class="col-md-6 mx-auto">
       <div class="card-body">
-        <div class="card-img">
+        <div class="card-img d-none">
           <img [src]="band?.photoAlbum | images" alt="{{ band?.name }}">
+        </div>
+        <div class="card-img">
+          <youtube-player
+          [videoId]="myVideoId"
+          suggestedQuality="highres"
+          [width]="500"
+          [height]="250"
+          [startSeconds]="0"
+          [endSeconds]="60">
+
+          </youtube-player>
         </div>
       </div>
     </div>

@@ -42,6 +42,9 @@ placeholder = {
 regexYear: RegExp = /^[0-9]*$/;
 regexUrl:  RegExp = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
 
+// youTube
+myVideoId: string = "";
+
   constructor(private route: ActivatedRoute,
               private router: Router,
               private formBuilder: FormBuilder,
@@ -53,7 +56,13 @@ regexUrl:  RegExp = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!
 
   ngOnInit(): void {
 this.pickUpBand();
-// this.showMembers();
+this.updateText();
+
+// Este código carga el reproductor de la API en un iframe de manera asíncrona, siguiendo las instrucciones:
+    // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
+const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
   }
 
 pickUpBand() {
@@ -62,7 +71,8 @@ pickUpBand() {
   .subscribe(
     (data: any) => {
       this.band = data;
-      console.log(this.band);
+      this.pickUpVideo(this.band.name, this.band.album);
+
     }, err => {
       console.log(err);
       this.serviceAllBands.errorHandler(err);
@@ -70,7 +80,7 @@ pickUpBand() {
   )
 }
 // delete
-deleteOneBand(id: any) {
+deleteOneBand(id: any):void {
   // id = (this.route.snapshot.paramMap.get('id'));
   this.serviceAllBands.deleteBand(id)
   .subscribe(
@@ -86,7 +96,7 @@ deleteOneBand(id: any) {
     this.closeDiv();
 }
 // create form
-createForm() {
+createForm(): void {
   this.updateForm = this.formBuilder.group({
     inputName    : [``, [Validators.required, Validators.minLength(3)]],
     inputAlbum   : [``, [Validators.required, Validators.minLength(1)]],
@@ -97,7 +107,7 @@ createForm() {
   })
 }
 // onsubmit
-onSubmit(id: any){
+onSubmit(id: any): void{
   console.log(this.updateForm.value);
   this.serviceAllBands.updateBand(id, this.updateForm.value).subscribe(
     (res) => {
@@ -116,12 +126,57 @@ onSubmit(id: any){
 // I need to do a mongoDB
 //
 showDiv(): void {
-  document.querySelector('#myForm').classList.remove('d-none') as unknown | null;
- // document.querySelector('#myDelete').classList.add('d-none') as unknown;
+  let myDiv = document.querySelector<any>('#myForm')as HTMLInputElement;
+  myDiv.classList.toggle('d-none');
+  (myDiv.classList.contains('d-none')) ? this.updateText() : this.closeForm();
+ // document.querySelector<any>('#myDelete').classList.add('d-none') as HTMLElement;
  // to discuss with UI/UX team
 }
 closeDiv(): void {
-  document.querySelector('#info').classList.add('d-none') as unknown | null;
+  document.querySelector<any>('#info').classList.add('d-none') as HTMLDivElement;
+  document.querySelector<any>('#myForm').classList.add('d-none') as HTMLInputElement;
+  document.querySelector<any>('#updateButton').classList.add('d-none') as HTMLElement;
+  document.querySelector<any>('#myDelete').classList.add('d-none') as HTMLElement;
 }
+closeForm(){
+ let messageButton = document.querySelector<any>('#updateButton') as HTMLElement;
+ messageButton.innerHTML = "close form";
+}
+updateText(){
+  let messageButton = document.querySelector<any>('#updateButton') as HTMLElement;
+  messageButton.innerHTML = "update album";
+}
+// videos depending on group
+pickUpVideo(str1: string , str2: string): void {
+  // should be with search api youtube in the future
+  switch (str1) {
+    case  "Queen":
+      console.log(str2);
+        (str2 == "Queen") ? this.myVideoId = "ZSUWOgQdX5A" : this.myVideoId = "AnBf_nm2zXw";
+      break;
+    case "The Rolling Stones":
+        (str2 == "The Rolling Stones") ? this.myVideoId = "V0uzD5DMt8k" : this.myVideoId = "5pPSswpdzfM";
+      break;
+    case "Pink Floyd":
+        (str2 == "The Piper at the Gates of Dawn") ? this.myVideoId = "xSOk0V7X_mA" : this.myVideoId = "UYI8NnN3xZg";
+      break;
+    case "Deep Purple":
+        (str2 == "Queen") ? this.myVideoId = "5gqAE42A" : this.myVideoId = "qtl3W7mhRLs";
+      break;
+    case "AC/DC":
+        (str2 == "High Voltage") ? this.myVideoId = "RlyPORi_B7s" : this.myVideoId = "6CwIB6pQoPo";
+      break;
+    case "Ramones":
+        (str2 == "Ramones") ? this.myVideoId = "LLzDw_1Y97I" : this.myVideoId = "zS6Cq9zpi_E&list=PLBnJv6rImVe_wI98YxutclL9vz8DfeqmJ";
+      break;
+    case "Kiss":
+        (str2 == "Kiss") ? this.myVideoId = "GVPNH3Za928" : this.myVideoId = "p4eFw0I1grs";
+      break;
 
+    default:
+          this.myVideoId = "UgfsbL-uHOA";
+      break;
+  }
+
+}
 }

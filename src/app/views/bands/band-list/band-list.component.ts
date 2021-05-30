@@ -38,8 +38,7 @@ newForm: FormGroup | any;
 // messages
 successMessage: string = "";
 errorMessage: string = "";
-// youTube
-myVideoId: string = "";
+
 
   constructor(private bandService: AllbandsService,
               private router: Router,
@@ -101,9 +100,5 @@ onSubmit(){
       this.bandService.errorHandler(err);
     });
 }
-// videos depending on group
-pickUpVideo(){
-  console.log('Youtube works');
-  
-}
+
 }
