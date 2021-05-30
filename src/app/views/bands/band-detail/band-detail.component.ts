@@ -29,7 +29,7 @@ successMessage: string = "";
 placeholder = {
   name: "Band's name",
   album: "Album's name",
-  year: "Year of release",
+  year: "example: 1921",
   info: "Lorem ipsum...",
   members: "John Wick, John Rambo, John Wayne, John Ford",
   url: "https://yourPhotoUrl.com"
@@ -96,18 +96,23 @@ deleteOneBand(id: any):void {
     this.closeDiv();
 }
 // create form
-createForm(): void {
+createForm() {
   this.updateForm = this.formBuilder.group({
     inputName    : [``, [Validators.required, Validators.minLength(3)]],
     inputAlbum   : [``, [Validators.required, Validators.minLength(1)]],
-    inputYear    : [``, [Validators.required, Validators.maxLength(4), Validators.pattern(this.regexYear)]],
+    inputYear    : [``, [Validators.required, Validators.minLength(4) , Validators.maxLength(4), Validators.pattern(this.regexYear)]],
     inputInfo    : [``, [Validators.required, Validators.minLength(40)]],
     inputMembers : [``, [Validators.required]],
     inputUrl     : [``, [Validators.required, Validators.pattern(this.regexUrl)]],
-  })
+  });
+}
+
+isValidInput(str: string): boolean {
+  const input: any = this.updateForm.get(str);
+  return input.touched && input.invalid;
 }
 // onsubmit
-onSubmit(id: any): void{
+onSubmit(id: any): any | null{
   console.log(this.updateForm.value);
   this.serviceAllBands.updateBand(id, this.updateForm.value).subscribe(
     (res) => {
@@ -128,23 +133,37 @@ onSubmit(id: any): void{
 showDiv(): void {
   let myDiv = document.querySelector<any>('#myForm')as HTMLInputElement;
   myDiv.classList.toggle('d-none');
-  (myDiv.classList.contains('d-none')) ? this.updateText() : this.closeForm();
+  (myDiv.classList.contains('d-none')) ? this.updateText() : this.closeText();
  // document.querySelector<any>('#myDelete').classList.add('d-none') as HTMLElement;
  // to discuss with UI/UX team
 }
 closeDiv(): void {
-  document.querySelector<any>('#info').classList.add('d-none') as HTMLDivElement;
-  document.querySelector<any>('#myForm').classList.add('d-none') as HTMLInputElement;
-  document.querySelector<any>('#updateButton').classList.add('d-none') as HTMLElement;
-  document.querySelector<any>('#myDelete').classList.add('d-none') as HTMLElement;
+  setTimeout(() => {
+    document.querySelector<any>('#info').classList.add('d-none') as HTMLDivElement;
+    this.closeForm();
+    this.clearUpdateButton();
+    this.clearDeleteButton();
+  }, 3000);
+
 }
-closeForm(){
+// change text button
+closeText(){
  let messageButton = document.querySelector<any>('#updateButton') as HTMLElement;
  messageButton.innerHTML = "close form";
 }
 updateText(){
   let messageButton = document.querySelector<any>('#updateButton') as HTMLElement;
   messageButton.innerHTML = "update album";
+}
+// close form after info sent
+closeForm() {
+  document.querySelector<any>('#myForm').classList.add('d-none') as HTMLInputElement;
+}
+clearDeleteButton() {
+  document.querySelector<any>('#myDelete').classList.add('d-none') as HTMLElement;
+}
+clearUpdateButton(){
+  document.querySelector<any>('#updateButton').classList.add('d-none') as HTMLElement;
 }
 // videos depending on group
 pickUpVideo(str1: string , str2: string): void {
@@ -167,7 +186,7 @@ pickUpVideo(str1: string , str2: string): void {
         (str2 == "High Voltage") ? this.myVideoId = "RlyPORi_B7s" : this.myVideoId = "6CwIB6pQoPo";
       break;
     case "Ramones":
-        (str2 == "Ramones") ? this.myVideoId = "LLzDw_1Y97I" : this.myVideoId = "zS6Cq9zpi_E&list=PLBnJv6rImVe_wI98YxutclL9vz8DfeqmJ";
+        (str2 == "Ramones") ? this.myVideoId = "LLzDw_1Y97I" : this.myVideoId = "PrIgZdmz52k";
       break;
     case "Kiss":
         (str2 == "Kiss") ? this.myVideoId = "GVPNH3Za928" : this.myVideoId = "p4eFw0I1grs";
