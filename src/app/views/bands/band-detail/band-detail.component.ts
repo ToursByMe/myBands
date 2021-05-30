@@ -44,6 +44,7 @@ regexUrl:  RegExp = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!
 
 // youTube
 myVideoId: string = "";
+tag?: HTMLScriptElement;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -55,14 +56,18 @@ myVideoId: string = "";
                }
 
   ngOnInit(): void {
+
 this.pickUpBand();
 this.updateText();
 
 // Este código carga el reproductor de la API en un iframe de manera asíncrona, siguiendo las instrucciones:
     // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
-const tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.body.appendChild(tag);
+    
+ this.tag = document.createElement('script');
+    this.tag.src = "https://www.youtube.com/iframe_api";
+    // cors error. Do not remove.
+    this.tag.crossOrigin = "anonymous";
+    document.body.appendChild(this.tag);
   }
 
 pickUpBand() {
@@ -71,7 +76,10 @@ pickUpBand() {
   .subscribe(
     (data: any) => {
       this.band = data;
+      // youtube
       this.pickUpVideo(this.band.name, this.band.album);
+      // set values
+      this.setValuesForm(this.band);
 
     }, err => {
       console.log(err);
@@ -106,7 +114,18 @@ createForm() {
     inputUrl     : [``, [Validators.required, Validators.pattern(this.regexUrl)]],
   });
 }
+// set values form
+setValuesForm(band: Mybands) {
+  this.updateForm.patchValue({
+  inputName: band.name,
+  inputAlbum:band.album,
+  inputYear: band.yearAlbum,
+  inputInfo: band.info,
+  inputMembers: band.arrMembers,
+  inputUrl: band.photoAlbum
+});
 
+}
 isValidInput(str: string): boolean {
   const input: any = this.updateForm.get(str);
   return input.touched && input.invalid;
@@ -143,6 +162,7 @@ closeDiv(): void {
     this.closeForm();
     this.clearUpdateButton();
     this.clearDeleteButton();
+    this.router.navigate(['/bands']);
   }, 3000);
 
 }

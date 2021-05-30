@@ -35,10 +35,10 @@
     </div>
     <div class="col-md-6 mx-auto">
       <div class="card-body">
-        <div class="card-img d-none">
+        <ng-template #showImageIf class="card-img d-none">
           <img [src]="band?.photoAlbum | images" alt="{{ band?.name }}">
-        </div>
-        <div class="card-img">
+        </ng-template>
+        <div class="card-img" *ngIf="tag?.src; else showImageIf">
           <youtube-player
           [videoId]="myVideoId"
           suggestedQuality="highres"
@@ -68,7 +68,7 @@
                id="bandName"
                formControlName="inputName"
                [placeholder]="placeholder.name"
-               [(ngModel)]="band.name"
+
                [ngClass]="{'is-invalid':isValidInput('inputName')}"
                >
         <div class="invalid-feedback mb-3">
@@ -86,7 +86,7 @@
                class="form-control"
                id="albumName"
                formControlName="inputAlbum"
-               [(ngModel)]="band.album"
+
                [placeholder]="placeholder.album"
                [ngClass]="{'is-invalid':isValidInput('inputAlbum')}">
                <div class="invalid-feedback mb-3">
@@ -103,7 +103,7 @@
                   id="yearAlbum"
                   aria-describedby="inputGroupPrepend"
                   formControlName="inputYear"
-                  [(ngModel)]="band.yearAlbum"
+
                   [placeholder]="placeholder.year"
                   [ngClass]="{'is-invalid':isValidInput('inputYear')}">
           <div class="invalid-feedback">
@@ -125,7 +125,7 @@
             <textarea class="form-control"
                       aria-label="Info Band"
                       formControlName="inputInfo"
-                      [(ngModel)]="band.info"
+
                       [placeholder]="placeholder.info"
                       [ngClass]="{'is-invalid':isValidInput('inputInfo')}">
             </textarea>
@@ -147,7 +147,7 @@
                  class="form-control"
                  id="yearAlbum"
                  formControlName="inputMembers"
-                 [(ngModel)]="band.arrMembers"
+
                  [placeholder]="placeholder.members"
                  [ngClass]="{'is-invalid':isValidInput('inputMembers')}">
           <div class="invalid-feedback">
@@ -164,7 +164,7 @@
                  class="form-control"
                  id="photoUpload"
                  formControlName="inputUrl"
-                 [(ngModel)]="band.photoAlbum"
+                 
                  [placeholder]="placeholder.url"
                  [ngClass]="{'is-invalid':isValidInput('inputUrl')}">
                  <div class="invalid-feedback">
@@ -178,7 +178,6 @@
       <div class="col-12">
         <button class="btn btn-primary text-capitalize"
         type="submit"
-        [disabled]="!updateForm.valid"
         (click)="closeForm()"
         >update band</button>
       </div>
