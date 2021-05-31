@@ -39,7 +39,9 @@ newForm: FormGroup | any;
 // messages
 successMessage: string = "";
 errorMessage: string = "";
-
+// boolean helper
+findIt   : boolean = false;
+findItTwo: boolean = false;
 
   constructor(private bandService: AllbandsService,
               private router: Router,
@@ -100,21 +102,42 @@ onSubmit(){
     (res) => {
       console.log(res);
       this.createBand(res);
-      this.successMessage = "Well done, you just created a new band";
-      this.toastr.success(this.successMessage, "Created band");
     }, err => {
       console.log(err);
       this.bandService.errorHandler(err);
     });
 }
-createBand(band: any) {
+createBand(band: any): void {
  // check id is first a number and then convert it to string
+ console.log(this.bandLength);
   this.bandLength = parseInt(this.bandLength);
   this.bandLength = this.bandLength + 1;
   this.bandLength = '' + this.bandLength;
-  // create new band
-  this.band = new Mybands(this.bandLength, band.name, band.members, band.album, band.yearAlbum, band.photoAlbum, band.info);
-  console.log(this.band);
+   // check if duplicates
+   this.checkBand(band);
+   if(this.findIt == true) {
+    this.errorMessage = `The ${band.inputName} Band  with ${band.inputAlbum} album already exist`;
+    this.toastr.error(this.errorMessage, "Data already in database");
+   }
+   if(this.findIt == false) {
+// create new band
+this.band = new Mybands(this.bandLength, band.inputName, band.inputMembers, band.inputAlbum, band.inputYear, band.inputUrl, band.inputInfo);
+ // place it into array of bands simulation is added in api
+ this.bands?.push(this.band);
+ this.successMessage = "Well done, you just created a new entry in the database";
+ this.toastr.success(this.successMessage, "Created data");
+   }
+  console.log(this.bands);
+// check network. Answer 201. New band created
 }
 
+checkBand(sentBand: any): boolean {
+  console.log('check works');
+ (this.bands?.find(band => band.album === sentBand.inputAlbum)) ? this.findIt = true : this.findIt = false;
+ (this.bands?.find((band) => band.name === sentBand.inputName)) ? this.findItTwo = true : this.findItTwo = false;
+  console.log(`${this.findIt}, ${this.findItTwo}`);
+ (this.findIt == true && this.findItTwo == true) ? this.findIt = true : this.findIt = false;
+ console.log(this.findIt);
+  return this.findIt;
+}
 }

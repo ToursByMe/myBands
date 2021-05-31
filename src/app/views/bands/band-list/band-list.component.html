@@ -1,4 +1,10 @@
 <div class="container-fluid bg-warning">
+  <div class="position-fixed top-50 end-10 rounded-circle">
+    <button class="rounded-circle bg-primary z-index-3 text-light text-center fw-bold"
+    style="width:3rem; height: 3rem;">
+      +
+    </button>
+  </div>
   <div class="row">
     <div class="text-center">
       <p class="lead" *ngIf="loading">Loading...</p>
@@ -87,7 +93,7 @@
                           <span class="fw-bold text-danger small" *ngIf="newForm.get('inputYear')?.errors?.required">
                             Field can't be empty
                           </span>
-                          <span class="fw-bold text-danger small" *ngIf="newForm.get('inputYear')?.errors?.minLength && updateForm.get('inputYear')?.errors?.maxLength">
+                          <span class="fw-bold text-danger small" *ngIf="newForm.get('inputYear')?.errors?.minLength && newForm.get('inputYear')?.errors?.maxLength">
                             Minimum {{newForm.get('inputYear')?.errors?.minlength}} characters required
                           </span>
                           <span class="fw-bold text-danger small" *ngIf="newForm.get('inputYear')?.errors?.pattern">
@@ -126,7 +132,7 @@
                        [placeholder]="placeholder.members"
                        [ngClass]="{'is-invalid':isValidInput('inputMembers')}">
                        <div class="invalid-feedback">
-                        <span class="fw-bold text-danger small" *ngIf="updateForm.get('inputInfo')?.errors?.required ">
+                        <span class="fw-bold text-danger small" *ngIf="newForm.get('inputInfo')?.errors?.required ">
                          Names required please
                         </span>
                       </div>
@@ -142,14 +148,16 @@
                        [placeholder]="placeholder.url"
                        [ngClass]="{'is-invalid':isValidInput('inputUrl')}">
                        <div class="invalid-feedback">
-                        <span class="fw-bold text-danger small" *ngIf="newForm.get('inputUrl')?.errors?.required || updateForm.get('inputUrl')?.errors?.pattern">
+                        <span class="fw-bold text-danger small" *ngIf="newForm.get('inputUrl')?.errors?.required || newForm.get('inputUrl')?.errors?.pattern">
                           Proper url required
                          </span>
                       </div>
               </div>
             </div>
             <div class="col-12">
-              <button class="btn btn-primary text-capitalize" type="submit">create band</button>
+              <button class="btn btn-primary text-capitalize"
+              type="submit"
+              [disabled]="!newForm.valid">create band</button>
             </div>
           </form>
 
