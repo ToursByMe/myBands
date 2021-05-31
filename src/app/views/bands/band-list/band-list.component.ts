@@ -90,9 +90,12 @@ createForm() {
     inputUrl     : [``, [Validators.required, Validators.pattern(this.regexUrl)]],
   })
 }
+// i should use a form service! KISS
+isValidInput(str: string): boolean {
+  const input: any = this.newForm.get(str);
+  return input.touched && input.invalid;
+}
 onSubmit(){
-  console.log('onsubmit works');
-//console.log(this.newForm.value);
   this.bandService.createBand( this.newForm.value).subscribe(
     (res) => {
       console.log(res);

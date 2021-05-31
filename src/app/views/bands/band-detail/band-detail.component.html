@@ -68,7 +68,6 @@
                id="bandName"
                formControlName="inputName"
                [placeholder]="placeholder.name"
-
                [ngClass]="{'is-invalid':isValidInput('inputName')}"
                >
         <div class="invalid-feedback mb-3">
@@ -86,7 +85,6 @@
                class="form-control"
                id="albumName"
                formControlName="inputAlbum"
-
                [placeholder]="placeholder.album"
                [ngClass]="{'is-invalid':isValidInput('inputAlbum')}">
                <div class="invalid-feedback mb-3">
@@ -103,7 +101,6 @@
                   id="yearAlbum"
                   aria-describedby="inputGroupPrepend"
                   formControlName="inputYear"
-
                   [placeholder]="placeholder.year"
                   [ngClass]="{'is-invalid':isValidInput('inputYear')}">
           <div class="invalid-feedback">
@@ -125,7 +122,6 @@
             <textarea class="form-control"
                       aria-label="Info Band"
                       formControlName="inputInfo"
-
                       [placeholder]="placeholder.info"
                       [ngClass]="{'is-invalid':isValidInput('inputInfo')}">
             </textarea>
@@ -147,7 +143,6 @@
                  class="form-control"
                  id="yearAlbum"
                  formControlName="inputMembers"
-
                  [placeholder]="placeholder.members"
                  [ngClass]="{'is-invalid':isValidInput('inputMembers')}">
           <div class="invalid-feedback">

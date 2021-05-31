@@ -49,10 +49,15 @@
                      id="bandName"
                      formControlName="inputName"
                      [placeholder]="placeholder.name"
-                     required>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
+                     [ngClass]="{'is-invalid':isValidInput('inputName')}">
+                     <div class="invalid-feedback mb-3">
+                      <span class="fw-bold text-danger small" *ngIf="newForm.get('inputName')?.errors?.required">
+                        Type a Band's name please
+                      </span>
+                      <span class="fw-bold text-danger small" *ngIf="newForm.get('inputName')?.errors?.minLength">
+                        Minimum {{newForm.get('inputName')?.errors?.minlength}} characters required
+                      </span>
+                  </div>
             </div>
             <div class="col-md-4">
               <label for="albumName" class="form-label">Album's name</label>
@@ -61,10 +66,12 @@
                      id="albumName"
                      formControlName="inputAlbum"
                      [placeholder]="placeholder.album"
-                     required>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
+                     [ngClass]="{'is-invalid':isValidInput('inputAlbum')}">>
+                     <div class="invalid-feedback mb-3">
+                      <span class=" fw-bold text-danger small" *ngIf="newForm.get('inputAlbum')?.errors?.required">
+                        Type an Album's name please
+                      </span>
+                  </div>
             </div>
             <div class="col-md-4">
               <label for="yearAlbum" class="form-label">Year of release</label>
@@ -75,10 +82,18 @@
                         aria-describedby="inputGroupPrepend"
                         formControlName="inputYear"
                         [placeholder]="placeholder.year"
-                        required>
-                <div class="invalid-feedback">
-                  Please type a year.
-                </div>
+                        [ngClass]="{'is-invalid':isValidInput('inputYear')}">
+                        <div class="invalid-feedback">
+                          <span class="fw-bold text-danger small" *ngIf="newForm.get('inputYear')?.errors?.required">
+                            Field can't be empty
+                          </span>
+                          <span class="fw-bold text-danger small" *ngIf="newForm.get('inputYear')?.errors?.minLength && updateForm.get('inputYear')?.errors?.maxLength">
+                            Minimum {{newForm.get('inputYear')?.errors?.minlength}} characters required
+                          </span>
+                          <span class="fw-bold text-danger small" *ngIf="newForm.get('inputYear')?.errors?.pattern">
+                            Only numbers please
+                          </span>
+                        </div>
               </div>
             </div>
             <div class="col-12 mx-auto">
@@ -87,11 +102,18 @@
                   <textarea class="form-control"
                             aria-label="Info Band"
                             formControlName="inputInfo"
-                            [placeholder]="placeholder.info">
+                            [placeholder]="placeholder.info"
+                            [ngClass]="{'is-invalid':isValidInput('inputInfo')}">
                   </textarea>
                 </div>
                 <div class="invalid-feedback">
-                  Text must be longer than 40 characters.
+                  <span class="fw-bold text-danger small" *ngIf="newForm.get('inputInfo')?.errors?.required ">
+                    Minimum characters required.  Text must be longer than 40 characters.
+                  </span>
+                  <span class="fw-bold text-danger small" *ngIf="newForm.get('inputInfo')?.errors?.minLength ">
+                    Text must be longer than 40 characters.
+                  </span>
+
                 </div>
             </div>
             <div class="col-md-6">
@@ -102,10 +124,12 @@
                        id="yearAlbum"
                        formControlName="inputMembers"
                        [placeholder]="placeholder.members"
-                       required>
-                <div class="invalid-feedback">
-                  Please type only names and surnames.
-                </div>
+                       [ngClass]="{'is-invalid':isValidInput('inputMembers')}">
+                       <div class="invalid-feedback">
+                        <span class="fw-bold text-danger small" *ngIf="updateForm.get('inputInfo')?.errors?.required ">
+                         Names required please
+                        </span>
+                      </div>
               </div>
             </div>
             <div class="col-md-6">
@@ -115,7 +139,13 @@
                        class="form-control"
                        id="photoUpload"
                        formControlName="inputUrl"
-                       [placeholder]="placeholder.url">
+                       [placeholder]="placeholder.url"
+                       [ngClass]="{'is-invalid':isValidInput('inputUrl')}">
+                       <div class="invalid-feedback">
+                        <span class="fw-bold text-danger small" *ngIf="newForm.get('inputUrl')?.errors?.required || updateForm.get('inputUrl')?.errors?.pattern">
+                          Proper url required
+                         </span>
+                      </div>
               </div>
             </div>
             <div class="col-12">

@@ -62,7 +62,7 @@ this.updateText();
 
 // Este código carga el reproductor de la API en un iframe de manera asíncrona, siguiendo las instrucciones:
     // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
-    
+
  this.tag = document.createElement('script');
     this.tag.src = "https://www.youtube.com/iframe_api";
     // cors error. Do not remove.
