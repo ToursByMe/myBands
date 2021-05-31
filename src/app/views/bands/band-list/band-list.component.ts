@@ -20,6 +20,7 @@ public loading: boolean;
 // for fake api
 bands: any[] | undefined;
 band: Mybands | undefined;
+bandLength: any;
 // placeholders
 placeholder = {
   name: "Band's name",
@@ -65,6 +66,8 @@ getMeBandsJson(): void{
     this.bandService.getAllBands().subscribe(
       (data: any) => {
         this.bands = data;
+        this.bandLength = data.length;
+        console.log(this.bandLength);
         console.log(this.bands);
       }, err => {
         console.log(err);
@@ -93,12 +96,22 @@ onSubmit(){
   this.bandService.createBand( this.newForm.value).subscribe(
     (res) => {
       console.log(res);
+      this.createBand(res);
       this.successMessage = "Well done, you just created a new band";
       this.toastr.success(this.successMessage, "Created band");
     }, err => {
       console.log(err);
       this.bandService.errorHandler(err);
     });
+}
+createBand(band: any) {
+ // check id is first a number and then convert it to string
+  this.bandLength = parseInt(this.bandLength);
+  this.bandLength = this.bandLength + 1;
+  this.bandLength = '' + this.bandLength;
+  // create new band
+  this.band = new Mybands(this.bandLength, band.name, band.members, band.album, band.yearAlbum, band.photoAlbum, band.info);
+  console.log(this.band);
 }
 
 }

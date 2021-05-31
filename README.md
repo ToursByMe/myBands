@@ -46,3 +46,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   * [**Cors Headers**](https://levelup.gitconnected.com/fixing-cors-errors-with-angular-cli-proxy-e5e0ef143f85) Errors
 
   * [**Cors Proxy**](https://www.techiediaries.com/fix-cors-with-angular-cli-proxy-configuration/#:~:text=Why%20Do%20CORS%20Issues%20Occur,server%20is%20not%20configured%20properly) Errors
+
+## Reactive Forms
+
+  * [**setValues**](https://stackoverflow.com/questions/55275025/how-to-set-value-to-form-control-in-reactive-forms-in-angular#:~:text=Setting%20or%20Updating%20of%20Reactive,value%20of%20your%20Form%20Controls.) in Reactive Forms
+
+  
