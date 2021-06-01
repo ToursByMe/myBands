@@ -17,3 +17,15 @@ h6 {
    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
    font-size: 1rem;
  }
+// medias typo
+@media only screen and (max-width: 991px){
+  header {
+      font-size: 0.85;
+  }
+}
+
+@media only screen and (max-width: 769px ) {
+  header {
+    font-size: 0.75;
+  }
+}
