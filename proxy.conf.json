@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://toursbyme.github.io/myBands/home",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}
