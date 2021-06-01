@@ -96,7 +96,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "bandcamp:build",
-            "proxyCofig": "./proxy.conf.json"
+            "proxyCofig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
