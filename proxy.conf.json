@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://toursbyme.github.io/myBands/home",
+    "target": "https://www.youtube.com/iframe_api",
     "secure": true,
     "changeOrigin": true,
     "logLevel": "debug",
