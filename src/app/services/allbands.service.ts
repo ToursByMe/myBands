@@ -26,7 +26,8 @@ export class AllbandsService {
     headers: new HttpHeaders ({
       'Content-Type': "application/json",
       Accept: "application/json",
-      "Access-Control-Allow-Origin": "http://localhost:4500",
+    //  "Access-Control-Allow-Origin": "http://localhost:4500",
+        "Access-Control-Allow-Origin": "https://toursbyme.github.io/myBands/",
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
       // "Access-Control-Allow-Origin": "*"
     })
