@@ -1,5 +1,5 @@
 <IfModule mod_headers.c>
-   Header set Access-Control-Allow-Origin "https://toursbyme.github.io/myBands/main"
+   Header set Access-Control-Allow-Origin "https://toursbyme.github.io/myBands/"
    Header set Access-Control-Allow-Credentials "true"
    Header set Access-Control-Allow-Methods "GET"
    Header set Access-Control-Allow-Headers "Origin, Content-Type, Accept"
